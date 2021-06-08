@@ -2,13 +2,51 @@
 <html lang="en">
 
 	<%- include('./partials/head.ejs') %> 
+    <link rel="stylesheet" href="/stylesheets/form.css">
 	
 <body background="/images/background-img.jpg">
     <%- include('./partials/navbar.ejs') %>
-	<main>
-        <form>
-            
-          </form>
+	<main class="main">
+        <div class="containerForm">
+            <form action="/action_page.php">
+              <div class="row">
+                <div class="col-25">
+                  <label for="concept">Concepto</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="concept" name="concept" placeholder="Concepto" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="amount">Monto</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="amount" name="amount" placeholder="Monto de la transaccion" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="date">Fecha de transaccion</label>
+                </div>
+                <div class="col-75">
+                  <input type="date" id="date" name="date" placeholder="Fecha de la transaccion" required></input>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">Tipo de transaccion</label>
+                </div>
+                <div class="col-75">
+                  <input type="radio" name="transaction" id="transaction" value="1">Ingreso
+                  <input type="radio" name="transaction" id="transaction" value="2">Egreso
+                </div>
+              </div>
+              <div class="row">
+                <input type="submit" value="Submit">
+              </div>
+            </form>
+          </div>
     </main>
     <%- include('./partials/foooter.ejs') %>
 </html>
