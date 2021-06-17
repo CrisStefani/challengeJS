@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   Operation.init({
     concepto: DataTypes.STRING,
-    monto: DataTypes.DECIMAL,
+    monto: DataTypes.DECIMAL(10,2),
     fecha: DataTypes.DATE,
     transaccion: DataTypes.STRING
   }, {
