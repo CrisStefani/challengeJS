@@ -18,6 +18,24 @@ const operationsController = {
             })
         res.redirect('/');
 
+    },
+
+    ingreso: function(req, res){
+         let suma = 0;
+        db.Operation.findAll({
+           
+        }).then((resultado) =>{
+           
+            
+              
+                console.log(resultado);
+              
+
+              
+            
+                
+        })
+        return res.render('operationForm')
     }
 
 }

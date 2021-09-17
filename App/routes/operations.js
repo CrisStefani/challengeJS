@@ -8,6 +8,8 @@ const fs = require('fs');
 router.get('/new', operationsController.new);
 router.post('/new', operationsController.create);
 
+router.get('/ingreso', operationsController.ingreso);
+
 
 
 
